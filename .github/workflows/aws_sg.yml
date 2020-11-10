@@ -64,11 +64,11 @@ jobs:
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Download Terraform 13.0
       run: |
-        apt update
-        apt install unzip -y
-        wget https://releases.hashicorp.com/terraform/0.13.5/terraform_0.13.0_linux_amd64.zip
-        unzip terraform_0.13.0_linux_amd64.zipmv
-        mv terraform /usr/local/bin/
+        sudo apt update
+        sudo apt install unzip -y
+        sudo wget https://releases.hashicorp.com/terraform/0.13.5/terraform_0.13.0_linux_amd64.zip
+        sudo unzip terraform_0.13.0_linux_amd64.zipmv
+        sudo mv terraform /usr/local/bin/
 
     - name: Set AWS Credentials
       run: |
