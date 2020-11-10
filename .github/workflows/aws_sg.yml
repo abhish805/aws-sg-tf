@@ -75,7 +75,6 @@ jobs:
         export AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}
         export AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
         export SOME_VAR="some var"
-        echo $SOME_VAR
 
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
@@ -88,6 +87,9 @@ jobs:
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
       run: terraform fmt -check
+
+    - name: Printing SOME_VAR
+      run: echo $SOME_VAR
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
