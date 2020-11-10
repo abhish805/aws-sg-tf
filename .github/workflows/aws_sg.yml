@@ -68,12 +68,12 @@ jobs:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v2
-    
-    - name: Echo GitHub Head Ref
-      run: echo ${{ github.head_ref }}
 
     - name: Echo GitHub Workspace
       run: echo ${{ github.workspace }}
+
+    - name: Echo GitHub Head Ref
+      run: echo ${{ github.head_ref }}
 
     - name: Echo GitHub Base Ref
       run: echo ${{ github.base_ref }}
