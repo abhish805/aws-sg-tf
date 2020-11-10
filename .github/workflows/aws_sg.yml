@@ -75,6 +75,7 @@ jobs:
         export AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}
         export AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
         export SOME_VAR="some var"
+        echo $SOME_VAR
 
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
