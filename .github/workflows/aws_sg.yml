@@ -69,11 +69,10 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Set selected color
-      run: echo '::set-output name=SELECTED_COLOR::green'
-      id: random-color-generator
-    - name: Get color
-      run: echo "The selected color is ${{ steps.random-color-generator.outputs.SELECTED_COLOR }}"
+    - name: Accessing Default ENV vars
+      run: echo ${{ GITHUB_REF }}
+      run: echo "${{ GITHUB_REF }}"
+      run: echo $GITHUB_REF
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     # - name: Terraform Init
